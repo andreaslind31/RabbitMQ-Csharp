@@ -27,7 +27,7 @@ namespace Receive
                 {
                     var body = ea.Body.ToArray();
                     var message = Encoding.UTF8.GetString(body);
-                    Console.WriteLine(" [x] Received {0}", message);
+                    Console.WriteLine($" [x] Received {message}");
                 };
                 channel
                     .BasicConsume(queue: "hello",
